@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+# Automateazy Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+This project is a ReactJS application that dynamically displays user data in a table. The table supports pagination, sorting, and search functionality. This application is designed to fetch user data from an online public API and present it in an organized and interactive manner.
 
-## Available Scripts
+## Features
+- **Dynamic Table**: Displays user data in a responsive and dynamic table.
+- **Sorting**: Allows sorting of users by ID and Age in both ascending and descending order.
+- **Pagination**: Enables navigation through different pages of user data.
+- **Search**: Provides a search bar to filter users based on their first name, last name, email, or ID.
 
-In the project directory, you can run:
+## Technologies Used
+- **ReactJS**: JavaScript library for building user interfaces.
+- **CSS**: Styling for the application.
 
-### `npm start`
+## Project Setup
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1. Prerequisites
+Ensure you have the following installed:
+- [Node.js](https://nodejs.org/) 
+- [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 2. Clone the Repository
+```bash
+git clone https://github.com/your-username/automateazy-user-management.git
+cd automateazy-user-management
 
-### `npm test`
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 3. Install Dependencies
+```bash
+npm install
+# or
+yarn install
+```
 
-### `npm run build`
+### 4. Run the Application
+```bash
+npm start
+# or
+yarn start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 5. Accessing the Application
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+http://localhost:3000
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Project Structure
 
-### `npm run eject`
+```bash
+automateasy_frontend/
+├── public/
+├── src/
+│   ├── App.js
+│   ├── App.css
+│   └── index.js
+├── .gitignore
+├── package.json
+└── README.md
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 1. `App.js`
+The main component of the application that handles the fetching, sorting, filtering, and pagination of user data. It also manages the state of the application.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 2. `App.css`
+Contains the styling for the entire application, making it responsive and user-friendly.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 3. `index.js`
+The entry point for the React application that renders the `App` component.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Code Explanation
 
-## Learn More
+### 1. Fetching Data
+The application fetches user data from the DummyJSON API in the `fetchData` function, which is called inside a `useEffect` hook to ensure the data is fetched when the component mounts.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 2. Sorting
+Sorting is implemented in the `sortData` function. The application allows sorting by `id` and `age`, with the direction (ascending or descending) toggling when the column header is clicked.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 3. Pagination
+Pagination is managed through `currentPage`, `entriesPerPage`, and calculated indexes (`indexOfLastEntry`, `indexOfFirstEntry`). The data is sliced accordingly to display only the relevant entries for the current page.
 
-### Code Splitting
+### 4. Search
+The `filterData` function filters the users based on the search query input, which checks if the user's first name, last name, email, or ID matches the query.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Usage Instructions
 
-### Analyzing the Bundle Size
+### Sorting
+Click on the column headers `ID` or `Age` to sort the table. An arrow indicator (↑ for ascending, ↓ for descending) will appear next to the header to show the current sort direction.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Pagination
+Use the "Previous" and "Next" buttons at the bottom of the table to navigate through pages. The current page number is highlighted.
 
-### Making a Progressive Web App
+### Search
+Type in the search bar above the table to filter the displayed users by first name, last name, email, or ID.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Error Handling
 
-### Advanced Configuration
+- **Fetching Errors**: Any issues with fetching data from the API will be logged to the console with a descriptive message.
+- **Empty States**: If no users are available or match the search criteria, a loading or empty state message will be displayed.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Conclusion
+This application provides a simple yet powerful interface for managing user data, complete with essential features like sorting, pagination, and search. It is built with ReactJS and can be easily extended or modified to fit additional requirements.
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## GitHub Repository
+To view the source code or contribute, visit the GitHub repository [here](https://github.com/aniketmu/automateasy_frontend).
