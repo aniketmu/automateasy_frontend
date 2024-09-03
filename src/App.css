@@ -1,38 +1,118 @@
-.App {
+/* app.css */
+.main {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  overflow: hidden;
+  font-family: Poppins, sans-serif;
+}
+
+.main::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: 0;
+  right: 0;
+  width: 200%;
+  height: 100%;
+  background-color: #DFECFF;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.main .header {
+  position: relative;
+  color: white;
+  z-index: 2;
+  padding: 80px 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main .header h1 {
+  font-size: 30px;
+  color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main .user-list {
+  position: relative;
+  z-index: 2;
+  margin: 0px auto; /* Center the table */
+  width: 90%; /* Responsive width */
+  max-width: 1000px; /* Limit the maximum width */
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0px 0px;
+}
+
+.main .user-list table {
+  border-collapse: collapse; /* Improve border styling */
+  width: 100%;
+  background-color: #f9f9f9;
+}
+
+.main .user-list th, td {
+  border: 1px solid #ddd; /* Lighter border color for cells */
+  padding: 14px; /* Add padding to cells */
+  text-align: center;
+}
+
+.main .user-list th {
+  background-color: #297DFE; /* Stylish header background color */
+  color: white; /* Header text color */
+  font-weight: bold; /* Bold header text */
+}
+
+.main .user-list tr:nth-child(even) {
+  background-color: #f2f2f2; /* Alternating row colors */
+}
+
+.main .user-list tr:hover {
+  background-color: #ddd; /* Highlight row on hover */
+}
+
+caption {
+  padding: 10px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+/* app.css */
+/* Add this to the existing CSS */
+
+.main .user-list .pagination {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 20px;
+}
+
+.main .user-list .pagination button {
+  background-color: #297DFE;
   color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.main .user-list .pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main .user-list .pagination button.active {
+  background-color: #0000ff;
+}
+
+.search {
+  margin: 0px 20px 20px 20px;
+  text-align: center;
+}
+
+.search input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
