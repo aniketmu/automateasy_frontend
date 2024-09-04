@@ -23,7 +23,7 @@ Ensure you have the following installed:
 ### 2. Clone the Repository
 ```bash
 git clone https://github.com/aniketmu/automateasy_frontend.git
-cd automateazy-frontend
+cd automateazy_frontend
 
 ```
 
