@@ -20,7 +20,6 @@ const App = () => {
     fetchData();
   }, []);
 
-  // Sorting logic
   const sortData = (data) => {
     return data.sort((a, b) => {
       const aValue = a[sortColumn];
@@ -31,7 +30,6 @@ const App = () => {
     });
   };
 
-  // Filter users based on search query
   const filterData = (data) => {
     return data.filter((user) => {
       const query = searchQuery.toLowerCase();
@@ -44,17 +42,14 @@ const App = () => {
     });
   };
 
-  // Calculate the current entries to display
   const indexOfLastEntry = currentPage * entriesPerPage;
   const indexOfFirstEntry = indexOfLastEntry - entriesPerPage;
   const filteredUsers = filterData(users);
   const sortedUsers = sortData(filteredUsers);
   const currentEntries = sortedUsers.slice(indexOfFirstEntry, indexOfLastEntry);
 
-  // Calculate total pages
   const totalPages = Math.ceil(filteredUsers.length / entriesPerPage);
 
-  // Handlers for pagination
   const handleNextPage = () => {
     if (currentPage < totalPages) {
       setCurrentPage(currentPage + 1);
@@ -71,7 +66,6 @@ const App = () => {
     setCurrentPage(pageNumber);
   }
 
-  // Handlers for sorting
   const handleSort = (column) => {
     if (sortColumn === column) {
       setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc');
@@ -81,10 +75,9 @@ const App = () => {
     }
   }
 
-  // Handler for search input
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
-    setCurrentPage(1); // Reset to the first page on search
+    setCurrentPage(1); 
   }
 
   return (
