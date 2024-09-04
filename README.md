@@ -18,7 +18,7 @@ This project is a ReactJS application that dynamically displays user data in a t
 ### 1. Prerequisites
 Ensure you have the following installed:
 - [Node.js](https://nodejs.org/) 
-- [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
+- [npm](https://www.npmjs.com/)
 
 ### 2. Clone the Repository
 ```bash
@@ -30,15 +30,11 @@ cd automateazy-frontend
 ### 3. Install Dependencies
 ```bash
 npm install
-# or
-yarn install
 ```
 
 ### 4. Run the Application
 ```bash
 npm start
-# or
-yarn start
 ```
 
 ### 5. Accessing the Application
