@@ -55,7 +55,8 @@ automateasy_frontend/
 ├── src/
 │   ├── App.js
 │   ├── App.css
-│   └── index.js
+│   ├── index.js
+|   └── index.css
 ├── .gitignore
 ├── package.json
 └── README.md
