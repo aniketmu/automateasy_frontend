@@ -100,9 +100,9 @@ const App = () => {
               <thead>
                 <tr>
                   <th onClick={() => handleSort('id')}>ID {sortColumn === 'id' && (sortDirection === 'asc' ? '↑' : '↓')}</th>
-                  <th onClick={() => handleSort('firstName')}>First Name</th>
-                  <th onClick={() => handleSort('lastName')}>Last Name</th>
-                  <th onClick={() => handleSort('email')}>Email</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Email</th>
                   <th onClick={() => handleSort('age')}>Age {sortColumn === 'age' && (sortDirection === 'asc' ? '↑' : '↓')}</th>
                 </tr>
               </thead>
