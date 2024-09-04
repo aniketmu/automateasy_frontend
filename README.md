@@ -18,27 +18,23 @@ This project is a ReactJS application that dynamically displays user data in a t
 ### 1. Prerequisites
 Ensure you have the following installed:
 - [Node.js](https://nodejs.org/) 
-- [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
+- [npm](https://www.npmjs.com/)
 
 ### 2. Clone the Repository
 ```bash
-git clone https://github.com/your-username/automateazy-user-management.git
-cd automateazy-user-management
+git clone https://github.com/aniketmu/automateasy_frontend.git
+cd automateazy-frontend
 
 ```
 
 ### 3. Install Dependencies
 ```bash
 npm install
-# or
-yarn install
 ```
 
 ### 4. Run the Application
 ```bash
 npm start
-# or
-yarn start
 ```
 
 ### 5. Accessing the Application
@@ -55,7 +51,8 @@ automateasy_frontend/
 ├── src/
 │   ├── App.js
 │   ├── App.css
-│   └── index.js
+│   ├── index.js
+|   └── index.css
 ├── .gitignore
 ├── package.json
 └── README.md
