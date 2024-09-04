@@ -1,4 +1,4 @@
-# Automateazy Frontend
+# Automateasy Frontend
 
 ## Overview
 This project is a ReactJS application that dynamically displays user data in a table. The table supports pagination, sorting, and search functionality. This application is designed to fetch user data from an online public API and present it in an organized and interactive manner.
@@ -23,7 +23,7 @@ Ensure you have the following installed:
 ### 2. Clone the Repository
 ```bash
 git clone https://github.com/aniketmu/automateasy_frontend.git
-cd automateazy_frontend
+cd automateasy_frontend
 
 ```
 
